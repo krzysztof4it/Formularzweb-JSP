@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="Formularz-webbapp:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="formularz-webapp.war">
-      <element id="artifact" artifact-name="Formularz-webbapp:war exploded" />
-    </root>
-  </artifact>
-</component>
