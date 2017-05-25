@@ -40,7 +40,8 @@ public class LoginServlet extends HttpServlet {
             // tworzę nowego użytkownika i przekazuję login
             User user = new User(login);
             session.setAttribute("user", login); // ustawia w sesji użytkownika
-            response.sendRedirect("logged.jsp");
+            response.sendRedirect("login.jsp?login=true");
+            //response.sendRedirect("logged.jsp");
 
         }else {
             // NOT OK

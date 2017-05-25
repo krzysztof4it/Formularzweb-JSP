@@ -31,13 +31,22 @@
 
 <div class="row">
     <div class="col-xs-12 col-md-12 col-lg-5">
-        <% if(request.getParameter("login")!= null || request.getParameter("login") == "false") { %>
+        <% if(request.getParameter("login")!= null){
+            if (request.getParameter("login") == "false") { %>
         <div class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span>
             Nieprawidłowe nazwa użytkownika lub hasło
         </div>
-        <%}%>
+        <%}else if (request.getParameter("login").equals("true")){%>
+        <div class="alert alert-success" role="alert">
+            <strong>Well done, <%= session.getAttribute("user")%>!</strong>
+
+            You successfully login to Webb App.
+        </div>
+        <%}
+        }
+        %>
 
         <form method="post" action="/login" id="login-form" >
             <div class="form-group">
